@@ -1,0 +1,10 @@
+@startuml
+actor User
+User -> RecipeInputForm : Enter Recipe Name & Details
+User -> RecipeInputForm : Click "Add Recipe"
+RecipeInputForm -> App : Add Recipe to State
+App -> RecipeList : Update List
+App -> RecipeSummary : Update Count
+RecipeList -> User : Display Updated List
+RecipeSummary -> User : Display Updated Count
+@enduml

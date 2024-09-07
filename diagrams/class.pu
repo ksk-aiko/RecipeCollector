@@ -1,0 +1,29 @@
+@startuml
+class App {
+  +recipes: Array
+  +addRecipe(name: String, details: String): void
+}
+
+class RecipeInputForm {
+  +handleSubmit(event: Event): void
+}
+
+class RecipeList {
+  +recipes: Array
+}
+
+class RecipeItem {
+  +name: String
+  +details: String
+  +toggleDetails(): void
+}
+
+class RecipeSummary {
+  +totalRecipes: int
+}
+
+App --> RecipeInputForm
+App --> RecipeList
+App --> RecipeSummary
+RecipeList --> RecipeItem
+@enduml

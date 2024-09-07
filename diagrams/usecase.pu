@@ -1,0 +1,8 @@
+@startuml
+actor User
+
+User --> (Add Recipe)
+User --> (View Recipe List)
+User --> (Toggle Recipe Details)
+User --> (View Recipe Count)
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+|User|
+start
+:Input Recipe Name;
+:Input Recipe Details;
+:Click "Add Recipe";
+|System|
+:Store Recipe;
+:Clear Input Fields;
+:Update Recipe List;
+:Update Recipe Count;
+stop
+@enduml

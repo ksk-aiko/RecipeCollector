@@ -1,0 +1,11 @@
+@startuml
+package "RecipeCollector" {
+  component "App" {
+    component "RecipeInputForm"
+    component "RecipeList" {
+      component "RecipeItem"
+    }
+    component "RecipeSummary"
+  }
+}
+@enduml
