@@ -1,12 +1,9 @@
 import React from 'react';
 
-function RecipeSummary() {
-  // レシピの数を管理するロジックを追加
-  const totalRecipes = 1; // 仮の数値
-
+function RecipeSummary({ count }) {
   return (
-    <div>
-      <h2>Total Recipes: {totalRecipes}</h2>
+    <div className="alert alert-info">
+      <h3>Total Recipes: {count}</h3>
     </div>
   );
 }

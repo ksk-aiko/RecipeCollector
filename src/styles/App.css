@@ -6,3 +6,8 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.list-group-item:hover {
+  color: #fff;
+  background-color: #007bff;
+}

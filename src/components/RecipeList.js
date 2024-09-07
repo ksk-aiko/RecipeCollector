@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 
-function RecipeList() {
-  const [recipes, setRecipes] = useState([
-    { name: 'Sample Recipe', details: 'Sample Details' }
-  ]);
+function RecipeList({ recipes }) {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   const toggleDetails = (index) => {
@@ -11,12 +8,13 @@ function RecipeList() {
   };
 
   return (
-    <ul>
+    <ul className="list-group">
       {recipes.map((recipe, index) => (
         <li 
           key={index} 
           onClick={() => toggleDetails(index)}
-          style={{ cursor: 'pointer', backgroundColor: selectedRecipe === index ? '#f0f0f0' : 'transparent' }}
+          className={`list-group-item ${selectedRecipe === index ? 'active' : ''}`}
+          style={{ cursor: 'pointer' }}
         >
           {recipe.name}
           {selectedRecipe === index && <p>{recipe.details}</p>}
